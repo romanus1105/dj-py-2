@@ -36,7 +36,7 @@ def recipes(request, recipe):
         recipe = DATA[recipe]
         for key in recipe.keys():
             recipe[key] = recipe[key] * servings
-        context = { 'recipe': recipe, 'servings': servings}
+        context = { 'recipe': recipe }
         return render(request, 'calculator/index.html', context)
     except:
         return render(request, 'calculator/index.html')
